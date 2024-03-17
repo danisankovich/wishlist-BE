@@ -1,0 +1,12 @@
+{
+    "friends": ["first last", "second last", "third last"],
+    "contact": {
+        "email": "#####_#######@gmail.com",
+        "phone": "(###) ###-####"
+    },
+    "details": {
+        "firstName": "Firstname",
+        "lastName": "Lastname"
+    },
+    "wishlistIds": ["1234", "5678", "9123", "badid"]
+}
