@@ -8,5 +8,6 @@
         "firstName": "Firstname",
         "lastName": "Lastname"
     },
-    "wishlistIds": ["1234", "5678", "9123", "badid"]
+    "wishlistIds": ["1234", "5678", "9123", "badid"],
+    "wishlists": []
 }

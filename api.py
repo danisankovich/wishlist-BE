@@ -1,8 +1,10 @@
 import time
 import json
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/time')
 def get_current_time():
@@ -24,7 +26,7 @@ def get_current_user():
         wishlistFile.close()
         filtered = filter(lambda w: w['id'] in wishlistIds, wishlistData)
         userData['wishlists'] = list(filtered)
-    return { 'data': userData }
+    return userData
 
 
 @app.route('/wishlists')
@@ -32,7 +34,7 @@ def getWishlists():
     f = open('./mock/wishlists.json', 'r')
     data = json.loads(f.read())
     f.close()
-    return { 'data': data }
+    return data
 
 @app.route('/wishlist')
 def getWishlistById():
@@ -42,4 +44,4 @@ def getWishlistById():
     f.close()
     wishlist = next(filter(lambda v: v['id'] == wishlistId, data), None)
 
-    return { 'data': wishlist }
+    return wishlist
